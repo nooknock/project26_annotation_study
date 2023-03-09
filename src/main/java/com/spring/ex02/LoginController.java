@@ -33,14 +33,18 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/test/login2.do", method = {RequestMethod.GET,RequestMethod.POST})
-	public ModelAndView login2(@RequestParam("userID") String userID,@RequestParam("userName") String userName,HttpServletRequest request, HttpServletResponse response) throws Exception{
+	public ModelAndView login2(@RequestParam("userID") String userID,@RequestParam(value="userName", required = true) String userName,@RequestParam(value="email",required = false) String email,HttpServletRequest request, HttpServletResponse response) throws Exception{
 		request.setCharacterEncoding("utf-8");
 		ModelAndView mav=new ModelAndView();
 		mav.setViewName("result");
 //		String userID=request.getParameter("userID");
 //		String userName=request.getParameter("userName");
+		System.out.println(userID);
+		System.out.println(userName);
+		System.out.println(email);
 		mav.addObject("userID",userID);
 		mav.addObject("userName",userName);
+		mav.addObject("email",email);
 		return mav;
 	}
 	

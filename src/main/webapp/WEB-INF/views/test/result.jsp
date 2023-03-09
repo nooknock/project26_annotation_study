@@ -13,6 +13,7 @@
 <body>
 <h1>아이디:${userID}</h1>
 <h1>이름:${userName}</h1>
+<h1>이메일:${email}</h1>
 
 
 </body>
