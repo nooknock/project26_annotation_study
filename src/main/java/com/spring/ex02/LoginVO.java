@@ -4,21 +4,23 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class LoginVO {
-	private String id;
-	private String pwd;
+	private String userID;
+	private String userName;
 	
-	public String getId() {
-		return id;
+	public String getUserID() {
+		return userID;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setUserID(String userID) {
+		this.userID = userID;
 	}
-	public String getPwd() {
-		return pwd;
+	public String getUserName() {
+		return userName;
 	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
+	
+	
 	
 	
 }

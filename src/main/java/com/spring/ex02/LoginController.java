@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -41,9 +42,9 @@ public class LoginController {
 		mav.setViewName("result");
 //		String userID=request.getParameter("userID");
 //		String userName=request.getParameter("userName");
-		System.out.println(userID);
-		System.out.println(userName);
-		System.out.println(email);
+//		System.out.println(userID);
+//		System.out.println(userName);
+//		System.out.println(email);
 		mav.addObject("userID",userID);
 		mav.addObject("userName",userName);
 		mav.addObject("email",email);
@@ -55,12 +56,26 @@ public class LoginController {
 		request.setCharacterEncoding("utf-8");
 		ModelAndView mav=new ModelAndView();
 		mav.setViewName("result");
-		String userID=info.get("userID");
-		String userName=info.get("userName");
-		System.out.println(userID);
-		System.out.println(userName);
+//		String userID=info.get("userID");
+//		String userName=info.get("userName");
+//		System.out.println(userID);
+//		System.out.println(userName);
 		
 		mav.addObject("info", info);
+		
+		return mav;
+	}
+	
+	@RequestMapping(value = "/test/login4.do", method = {RequestMethod.GET,RequestMethod.POST})
+	public ModelAndView login4(@ModelAttribute("info") LoginVO loginVO,HttpServletRequest request, HttpServletResponse response) throws Exception{
+		request.setCharacterEncoding("utf-8");
+		ModelAndView mav=new ModelAndView();
+		mav.setViewName("result");
+		
+		System.out.println(loginVO.getUserID());
+		System.out.println(loginVO.getUserName());
+		
+		
 		
 		return mav;
 	}
