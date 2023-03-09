@@ -19,5 +19,11 @@
 <input type="submit" value="로그인">
 <input type="reset" value="초기화"> 
 </form>
+<form method="post" action="${contextPath}/test/login2.do">
+아이디:<input type="text" name="userID"><br>
+이름:<input type="text" name="userName"><br>
+<input type="submit" value="로그인">
+<input type="reset" value="초기화"> 
+</form>
 </body>
 </html>
