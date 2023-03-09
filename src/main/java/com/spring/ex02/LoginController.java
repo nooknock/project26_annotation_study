@@ -1,5 +1,7 @@
 package com.spring.ex02;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -48,4 +50,18 @@ public class LoginController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/test/login3.do", method = {RequestMethod.GET,RequestMethod.POST})
+	public ModelAndView login3(@RequestParam Map<String, String> info,HttpServletRequest request, HttpServletResponse response) throws Exception{
+		request.setCharacterEncoding("utf-8");
+		ModelAndView mav=new ModelAndView();
+		mav.setViewName("result");
+		String userID=info.get("userID");
+		String userName=info.get("userName");
+		System.out.println(userID);
+		System.out.println(userName);
+		
+		mav.addObject("info", info);
+		
+		return mav;
+	}
 }

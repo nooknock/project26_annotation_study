@@ -11,6 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller("asdawf")
 @RequestMapping("/mmmmm")
 public class Kzzz {
+	
+	
 
 	@RequestMapping(value = {"/iioio.do", "/pppo.do"},method = RequestMethod.GET)
 	ModelAndView dawda(HttpServletRequest request, HttpServletResponse response) throws Exception{
