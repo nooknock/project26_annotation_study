@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -72,11 +73,23 @@ public class LoginController {
 		ModelAndView mav=new ModelAndView();
 		mav.setViewName("result");
 		
-		System.out.println(loginVO.getUserID());
-		System.out.println(loginVO.getUserName());
+//		System.out.println(loginVO.getUserID());
+//		System.out.println(loginVO.getUserName());
 		
 		
 		
 		return mav;
 	}
+	
+	@RequestMapping(value = "/test/login5.do", method = {RequestMethod.GET,RequestMethod.POST})
+	public String login5(Model model,HttpServletRequest request, HttpServletResponse response) throws Exception{
+		request.setCharacterEncoding("utf-8");
+		ModelAndView mav=new ModelAndView();
+		
+		model.addAttribute("userID","hong");
+		model.addAttribute("userName","홍길동");
+				
+		return "result";
+	}
+	
 }
