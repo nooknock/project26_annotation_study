@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller("mainController")
-@RequestMapping("/fsefse")
+@RequestMapping("/test")
 public class MainController {
 	
-	@RequestMapping(value = "/cascasdaswd.do",method = RequestMethod.GET )
+	@RequestMapping(value = "/main1.do",method = RequestMethod.GET )
 	ModelAndView main1(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		ModelAndView mav=new ModelAndView();
-		mav.addObject("fasd","hiasdasd");
-		mav.setViewName("dsdaw");
+		mav.addObject("msg","main1");
+		mav.setViewName("main");
 		return mav;
 		
 	}
