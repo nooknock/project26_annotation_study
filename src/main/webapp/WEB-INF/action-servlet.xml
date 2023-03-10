@@ -14,7 +14,7 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
-		<property name="prefix" value="/WEB-INF/views/test/" /> 
+		<property name="prefix" value="/WEB-INF/views/member/" /> 
 		<property name="suffix" value=".jsp" />
 		</bean>
 		
@@ -24,5 +24,5 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
   <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
 <!-- Scans the classpath for annotated components that will be auto-registered as Spring beans. -->
    <context:component-scan base-package="com.spring"/>
-
+	<!-- 어노테이션읽을때 com.spring을 싹다 읽어라 -->
 </beans>

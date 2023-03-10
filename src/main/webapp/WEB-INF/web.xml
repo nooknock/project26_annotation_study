@@ -3,7 +3,7 @@
   <display-name>pro26</display-name>
   
   <!--  이거 추가하면 무조건 action-mybatis.xml 읽기 때문에 action-mybatis.xml에 오류 있으면 에러남  -->
-  <!-- <listener>
+   <listener>
 		<listener-class>
 		org.springframework.web.context.ContextLoaderListener
 		</listener-class>
@@ -11,7 +11,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/config/action-mybatis.xml	</param-value>
-	</context-param> -->
+	</context-param>
   
   <servlet> <!-- action 파일명이 들어있는 파일들을 읽어옴 -->
 		<servlet-name>action</servlet-name>
