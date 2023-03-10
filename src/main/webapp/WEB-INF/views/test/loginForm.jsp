@@ -13,6 +13,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1>로그인1</h1>
 <form method="post" action="${contextPath}/test/login.do">
 아이디:<input type="text" name="userID"><br>
 이름:<input type="text" name="userName"><br>
@@ -21,7 +22,7 @@
 </form>
 
 
-
+<h1>로그인2</h1>
 <form method="post" action="${contextPath}/test/login2.do">
 <!-- <input type="hidden" name="email" value="hong@test.com"> -->
 아이디:<input type="text" name="userID"><br>
@@ -32,7 +33,7 @@ e멜:<input type="text" name="email12312"><br><!--  @RequestParam(required=false
 <input type="reset" value="초기화"> 
 </form>
 
-
+<h1>로그인3</h1>
 <form method="post" action="${contextPath}/test/login3.do">
 <!-- <input type="hidden" name="email" value="hong@test.com"> -->
 아이디:<input type="text" name="userID"><br>
@@ -43,7 +44,7 @@ e멜:<input type="text" name="email12312"><br><!--  @RequestParam(required=false
 <input type="reset" value="초기화"> 
 </form>
 
-
+<h1>로그인4</h1>
 <form method="post" action="${contextPath}/test/login4.do">
 <!-- <input type="hidden" name="email" value="hong@test.com"> -->
 아이디:<input type="text" name="userID"><br>
@@ -54,6 +55,7 @@ e멜:<input type="text" name="email12312"><br><!--  @RequestParam(required=false
 <input type="reset" value="초기화"> 
 </form>
 
+<h1>로그인5</h1>
 <form method="post" action="${contextPath}/test/login5.do">
 <!-- <input type="hidden" name="email" value="hong@test.com"> -->
 아이디:<input type="text" name="userID"><br>
